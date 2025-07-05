@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#FBCFE8" />
+  <title>A Day For You</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .handwritten {
+      font-family: 'Caveat', cursive;
+    }
+    .fun-text {
+      font-family: 'Comic Neue', cursive;
+    }
+    .bg-stars {
+      background: radial-gradient(circle, rgba(255,255,255,0.3) 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+    .floating {
+      animation: floating 3s ease-in-out infinite;
+    }
+    .pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    @keyframes floating {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    .transition-all {
+      transition: all 0.3s ease;
+    }
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #f0f;
+      opacity: 0;
+    }
+    .tap-highlight-none {
+      -webkit-tap-highlight-color: transparent;
+    }
+    .text-size-adjust {
+      text-size-adjust: 100%;
+    }
+    @media (max-width: 640px) {
+      .mobile-text-lg {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+      }
+      .mobile-text-xl {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+      }
+      .mobile-text-2xl {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+      .mobile-text-4xl {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+      }
+      .mobile-text-5xl {
+        font-size: 3rem;
+        line-height: 1;
+      }
+    }
+  </style>
+</head>
+<body class="bg-pink-50 text-gray-800 font-sans overflow-x-hidden tap-highlight-none text-size-adjust">
+  <!-- Landing Section -->
+  <section class="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-pink-400 via-rose-300 to-pink-200 relative overflow-hidden bg-stars">
+    <!-- Animated floating cat stickers - repositioned for mobile -->
+    <a href="https://giphy.com/search/cute-cat" target="_blank" class="w-20 sm:w-28 absolute top-4 sm:top-8 left-4 sm:left-8 floating transition-all active:scale-95 hover:scale-110">
+      <img src="https://cdn.jsdelivr.net/gh/teacats/assets/cat1.png" alt="cat sticker" class="w-full">
+    </a>
+    <a href="https://www.youtube.com/watch?v=J---aiyznGQ" target="_blank" class="w-16 sm:w-24 absolute bottom-4 sm:bottom-8 right-4 sm:right-8 pulse transition-all active:scale-95 hover:scale-110">
+      <img src="https://cdn.jsdelivr.net/gh/teacats/assets/cat2.png" alt="cat sticker" class="w-full">
+    </a>
+    
+    <!-- Birthday message with responsive sizing -->
+    <div class="text-center transform transition-all active:scale-100 hover:scale-105 px-4">
+      <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold handwritten text-rose-700 bg-white bg-opacity-70 px-6 sm:px-8 py-3 sm:py-4 rounded-2xl shadow-lg mobile-text-5xl">
+        Happy Birthday
+      </h1>
+      <p class="mt-4 sm:mt-6 text-lg sm:text-xl md:text-2xl text-rose-800 bg-white bg-opacity-50 px-3 sm:px-4 py-1 sm:py-2 rounded-full inline-block mobile-text-2xl">
+        To the one who stayed
+      </p>
+      <p class="mt-3 sm:mt-4 text-base sm:text-lg text-gray-600 fun-text mobile-text-lg">
+        You've always made things better—just by being there.
+      </p>
+    </div>
+  </section>
+
+  <!-- Scrollable Letter Section with larger touch targets -->
+  <section class="px-4 sm:px-6 py-12 sm:py-20 max-w-2xl mx-auto handwritten text-lg sm:text-xl space-y-4 sm:space-y-6 bg-white bg-opacity-90 text-rose-900 rounded-t-3xl shadow-xl -mt-8 sm:-mt-12 relative z-10 transform transition-all active:shadow-lg">
+    <p class="transform transition-all active:scale-[1.02] active:pl-2 py-2 sm:py-0 mobile-text-xl">
+      You're not mine. I know.<br>But you've been in every story I've told myself about feeling seen.
+    </p>
+    <p class="transform transition-all active:scale-[1.02] active:pl-2 py-2 sm:py-0 mobile-text-xl">
+      When we talk, time goes too fast. When we don't, it goes too slow.
+    </p>
+    <p class="transform transition-all active:scale-[1.02] active:pl-2 py-2 sm:py-0 mobile-text-xl">
+      I never asked for more. But I've thought about it more times than I'll ever admit out loud.
+    </p>
+    <p class="transform transition-all active:scale-[1.02] active:pl-2 py-2 sm:py-0 mobile-text-xl">
+      Maybe you'll forget this site. Maybe you'll remember how it made you feel.<br>Either way, I'm glad I made it. Because it's still your day.
+    </p>
+    <p class="transform transition-all active:scale-[1.02] active:pl-2 py-2 sm:py-0 mobile-text-xl">
+      And you've always deserved something that's only for you.
+    </p>
+    
+    <div class="flex justify-center pt-4 sm:pt-6">
+      <a href="https://open.spotify.com/playlist/37i9dQZF1DX4SBhb3fqCJd" target="_blank" class="transform transition-all active:scale-110 hover:scale-125 active:rotate-6">
+        <img src="https://cdn.jsdelivr.net/gh/teacats/assets/cat3.png" alt="heart cat" class="w-20 sm:w-24">
+      </a>
+    </div>
+  </section>
+
+  <!-- Hidden Section with larger button for touch -->
+  <section class="px-4 sm:px-6 py-12 sm:py-20 flex flex-col items-center bg-gradient-to-b from-pink-300 to-rose-200 relative overflow-hidden">
+    <button 
+      onclick="showHiddenMessage()" 
+      class="bg-white px-6 py-4 sm:py-3 rounded-full shadow-lg text-rose-700 active:bg-rose-100 transition-all transform active:scale-105 hover:scale-110 active:shadow-xl fun-text font-bold text-lg sm:text-xl border-2 border-rose-300 w-full max-w-xs mobile-text-xl"
+    >
+      🎁 Don't tap this 🎁
+    </button>
+    
+    <div id="hidden-message" class="hidden mt-6 sm:mt-8 text-center text-xl sm:text-2xl text-rose-800 handwritten bg-white bg-opacity-80 p-6 sm:p-8 rounded-2xl shadow-md transform transition-all duration-500 scale-95 mx-4 mobile-text-2xl">
+      If you ever wanted more from me...<br>I'd never make you regret saying yes.
+      <div class="mt-4 sm:mt-6">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="transform transition-all active:scale-110 hover:scale-110 block">
+          <img src="https://cdn.jsdelivr.net/gh/teacats/assets/cat4.png" alt="shy cat" class="w-16 sm:w-20 mx-auto">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing Note with optimized spacing -->
+  <section class="px-4 sm:px-6 py-12 sm:py-24 bg-gradient-to-b from-rose-200 to-pink-300 text-center relative overflow-hidden">
+    <div class="max-w-2xl mx-auto relative">
+      <p class="text-xl sm:text-2xl md:text-3xl font-light handwritten transform transition-all active:scale-[1.02] mobile-text-2xl">
+        Whatever we are,<br>whatever we become—<br>I'll never forget that I got to know you.
+      </p>
+      <p class="mt-6 sm:mt-8 text-lg sm:text-xl text-gray-600 bg-white bg-opacity-70 px-4 py-2 rounded-full inline-block fun-text mobile-text-xl">
+        Thanks for existing, Shambhavi.<br>Happy Birthday.
+      </p>
+      
+      <div class="mt-8 sm:mt-10 flex justify-center gap-4 sm:gap-6 flex-wrap">
+        <a href="https://www.instagram.com/explore/tags/cute/" target="_blank" class="transform transition-all active:scale-110 hover:scale-125 active:-translate-y-2">
+          <img src="https://cdn.jsdelivr.net/gh/teacats/assets/cat5.png" alt="cat wink" class="w-16 sm:w-20">
+        </a>
+        <a href="https://www.pinterest.com/search/pins/?q=cute%20kitten" target="_blank" class="transform transition-all active:scale-110 hover:scale-125 active:rotate-6">
+          <img src="https://cdn.jsdelivr.net/gh/teacats/assets/cat1.png" alt="cat paws" class="w-16 sm:w-20">
+        </a>
+        <a href="https://www.youtube.com/watch?v=XyNlqQId-nk" target="_blank" class="transform transition-all active:scale-110 hover:scale-125 active:-rotate-6">
+          <img src="https://cdn.jsdelivr.net/gh/teacats/assets/cat3.png" alt="cat heart" class="w-16 sm:w-20">
+        </a>
+      </div>
+    </div>
+    
+    <!-- Footer with copyright -->
+    <div class="mt-12 sm:mt-16 text-sm text-rose-700 fun-text">
+      Made with ❤️ for Shambhavi's special day
+    </div>
+  </section>
+
+  <script>
+    // Function to show hidden message with confetti
+    function showHiddenMessage() {
+      const message = document.getElementById('hidden-message');
+      message.classList.remove('hidden');
+      message.classList.add('block');
+      
+      // Create confetti effect
+      createConfetti();
+      
+      // Vibrate if supported
+      if ('vibrate' in navigator) {
+        navigator.vibrate([100, 50, 100]);
+      }
+    }
+    
+    // Create confetti effect
+    function createConfetti() {
+      const colors = ['#ff0000', '#ff00ff', '#00ffff', '#ffff00', '#00ff00'];
+      const container = document.createElement('div');
+      container.style.position = 'fixed';
+      container.style.top = '0';
+      container.style.left = '0';
+      container.style.width = '100%';
+      container.style.height = '100%';
+      container.style.pointerEvents = 'none';
+      container.style.zIndex = '1000';
+      document.body.appendChild(container);
+      
+      for (let i = 0; i < 50; i++) { // Reduced number for mobile performance
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        confetti.style.left = Math.random() * 100 + 'vw';
+        confetti.style.top = -10 + 'px';
+        confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.width = Math.random() * 10 + 5 + 'px';
+        confetti.style.height = Math.random() * 10 + 5 + 'px';
+        confetti.style.borderRadius = '50%';
+        container.appendChild(confetti);
+        
+        const animationDuration = Math.random() * 3 + 2;
+        
+        confetti.animate([
+          { top: '-10px', opacity: 1, transform: 'rotate(0deg)' },
+          { top: '100vh', opacity: 0, transform: 'rotate(360deg)' }
+        ], {
+          duration: animationDuration * 1000,
+          easing: 'cubic-bezier(0.1, 0.8, 0.9, 1)'
+        });
+        
+        setTimeout(() => {
+          confetti.remove();
+        }, animationDuration * 1000);
+      }
+      
+      setTimeout(() => {
+        container.remove();
+      }, 3000);
+    }
+    
+    // Touch-friendly hover alternatives
+    document.querySelectorAll('a, button').forEach(element => {
+      element.addEventListener('touchstart', () => {
+        element.classList.add('active');
+      });
+      element.addEventListener('touchend', () => {
+        element.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>
